@@ -16,13 +16,13 @@ public class Main {
       
         String response = "";
         
-        while(!response.equals("Q")){
+        while(!response.equals("Q")) {
             System.out.println("P - play , S - stop, R - reset, Q - quit");
             System.out.print("Enter your choice: ");
             
             response = scanner.next();
             response = response.toUpperCase();
-            switch(response){
+            switch(response) {
                 case "P" : clip.start();
                 break;
                 case "S" : clip.stop();
