@@ -11,7 +11,6 @@ public class EncryptionProgram {
     private ArrayList<Character> list;
     private ArrayList<Character> shuffledList;
     private char character;
-    private String line;
     private char[] letters;
     
     EncryptionProgram(){
@@ -72,16 +71,10 @@ public class EncryptionProgram {
     
     private void getKey(){
         System.out.println("Key: ");
-        for(Character x: list){
-            System.out.print(x);
-        }
-        System.out.println();
-        
-        for(Character x: shuffledList){
-            System.out.print(x);
-        }
-        System.out.println("");
+        printArrayList(list);
+        printArrayList(shuffledList);
     }
+    
     
     private void encrypt(){
         System.out.println("Enter a message to be encrypted: ");
@@ -99,11 +92,7 @@ public class EncryptionProgram {
         }
         
         System.out.println("Encrypted: ");
-        for (char x : letters){ 
-           System.out.print(x); 
-        }
-        System.out.println();
-        
+        printCharArray(letters);
     }
     
     private void decrypt(){
@@ -122,15 +111,26 @@ public class EncryptionProgram {
         }
         
         System.out.println("Decrypted: ");
+        printCharArray(letters);
+    }
+    
+    private void quit(){
+        System.out.println("Nice to see you, have a good day!");
+        System.exit(0);
+    }
+
+    private void printArrayList(ArrayList<Character> list) { 
+        for (Character x : list){
+            System.out.print(x);
+        }
+        System.out.println();
+    }
+
+    private void printCharArray(char[] letters) {
         for (char x : letters){ 
            System.out.print(x); 
         }
         System.out.println();
-    }
-    
-    private void quit(){
-        System.out.println("Nice to see you sweetie, have a good day!");
-        System.exit(0);
     }
     
 }

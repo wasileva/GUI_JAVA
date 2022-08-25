@@ -3,9 +3,7 @@ package encryption;
 
 public class Main {
 
-
     public static void main(String[] args) {
-        EncryptionProgram ep = new EncryptionProgram();
-    }
-    
+        new EncryptionProgram();
+    }   
 }
