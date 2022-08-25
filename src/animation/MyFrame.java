@@ -2,10 +2,10 @@ package animation;
 
 import javax.swing.JFrame;
 
-public class MyFrame extends JFrame{
+public class MyFrame extends JFrame {
     MyPanel panel;
     
-    MyFrame(){
+    MyFrame() {
         panel = new MyPanel();
         this.setTitle("Alien");
         this.add(panel);
