@@ -67,8 +67,7 @@ public class LoginPage implements ActionListener{
                     messageLabel.setForeground(new Color(34,235,40));
                     messageLabel.setText("Login Successful");
                     frame.dispose();
-     //              WelcomePage welcome = new WelcomePage(userID);
-                      new WelcomePage(userID); 
+                    new WelcomePage(userID); 
                     
                 }
             }
