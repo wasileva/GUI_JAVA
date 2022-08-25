@@ -10,19 +10,19 @@ import javax.swing.JColorChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class ChooseColor extends JFrame implements ActionListener{
+public class ChooseColor extends JFrame implements ActionListener {
     
     
     JButton button = new JButton("Select a color");
     JLabel label = new JLabel("Change color of this text");
     
-    ChooseColor(){
+    ChooseColor() {
       this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       this.setTitle("Choose Color");
       this.setLayout(new FlowLayout());
       button.addActionListener(this);
       
-      label.setFont(new Font("MV Boli",Font.PLAIN,25));
+      label.setFont(new Font("MV Boli", Font.PLAIN, 25));
       label.setOpaque(true);
       this.add(label);
       this.add(button);
@@ -33,7 +33,6 @@ public class ChooseColor extends JFrame implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == button){
-         //   JColorChooser chooser = new JColorChooser();
             Color color = JColorChooser.showDialog(null, "Pick a color", Color.yellow);
             label.setBackground(color);
             label.setForeground(color);
