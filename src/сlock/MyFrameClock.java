@@ -2,13 +2,10 @@ package сlock;
 
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import javax.swing.*;
 
@@ -38,7 +35,7 @@ public class MyFrameClock extends JFrame{
         timeLabel.setForeground(new Color(0x00FF00));
         timeLabel.setBackground(Color.BLACK);
         timeLabel.setOpaque(true);
-        
+       
         dayFormat = new SimpleDateFormat("EEEE");
         dayLabel = new JLabel();
         dayLabel.setFont(new Font("Georgia", Font.PLAIN,35));
@@ -46,15 +43,13 @@ public class MyFrameClock extends JFrame{
         dateFormat = new SimpleDateFormat("dd MMMM yyyy");
         dateLabel = new JLabel();
         dateLabel.setFont(new Font("Times New Roman", Font.PLAIN, 50));
-        
-                
+                     
         this.add(timeLabel);
         this.add(dayLabel);      
         this.add(dateLabel);
         
         this.setVisible(true);
-        setTime();
-        
+        setTime();      
     }
     
     public void setTime(){
